@@ -24,12 +24,12 @@ repositories {
 
 apply plugin: 'forge'
 
-version = "1.1.2"
+version = "1.1.2b"
 group = "tonius.neiintegration"
 archivesBaseName = "NEIIntegration-MC1.7.10"
 
 minecraft {
-    version = "1.7.10-10.13.4.1448-1.7.10"
+    version = "1.7.10-10.13.4.1614-1.7.10"
     runDir = "run"
     
     replaceIn "NEIIntegration.java"
@@ -43,6 +43,18 @@ dependencies {
     // http://chickenbones.net/maven
     compile "codechicken:CodeChickenCore:1.7.10-1.0.7.46:dev"
     compile "codechicken:NotEnoughItems:1.7.10-1.0.5.111:dev"
+    
+    compile files {
+		'libs/appliedenergistics2-rv2-stable-10-api.jar'
+		'libs/BigReactors-0.4.3A.jar'
+		'libs/buildcraft-7.1.9-dev.jar'
+		'libs/CoFHCore-[1.7.10]3.0.3-303-dev.jar'
+		'libs/ElectricalAge_BETA-1.10_r50.jar'
+		'libs/forestry_1.7.10-3.6.12.3-dev.jar'
+		'libs/Master_Chef_v5.2-1.7.10.jar'
+		'libs/MineFactoryReloaded-[1.7.10]2.8.0-104.jar'
+		'libs/Pam\'s HarvestCraft 1.7.10La.jar'
+    }
 }
 
 processResources {
